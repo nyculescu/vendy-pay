@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="nyc.vendy_pay.MainActivity">
+
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:padding="16dp">
+
+        <SurfaceView
+            android:id="@+id/camera_view"
+            android:layout_width="390px"
+            android:layout_height="640px"
+            android:layout_below="@+id/message"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/code_info"
+            android:textSize="20sp"
+            android:layout_marginLeft="16dp"
+            android:text="Nothing to read."
+            android:layout_below="@+id/camera_view"
+            android:layout_alignStart="@+id/message"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/title_home"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="?android:attr/windowBackground"
+            app:menu="@menu/navigation"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/code_info"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>
